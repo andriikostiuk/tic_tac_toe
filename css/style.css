@@ -1,0 +1,1196 @@
+body, html {
+  height: 100%;
+  background-color: black;
+}
+
+:root {
+  font-size: 16px;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5fr 7.9fr 0.6fr;
+  grid-template-areas: 
+    'headerArea'
+    'mainArea'
+    'footerArea';
+}
+
+header {
+  grid-area: headerArea;
+  text-align: center;
+  font-family: Monoton;
+  background: radial-gradient(circle, rgb(0, 230, 230), rgb(255, 51, 204));
+);
+}
+
+h1 {
+  font-size: 3.9rem;
+  color: yellow;
+  text-shadow: 0.15rem 0.15rem 0 black;
+}
+
+main {
+  grid-area: mainArea;
+  font-family: Quicksand;
+  font-weight: 500;
+}
+
+footer {
+  grid-area: footerArea;
+  text-align: center;
+  background: radial-gradient(circle, rgb(0, 230, 230), rgb(255, 51, 204));
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    'authorArea socialMediaArea';
+}
+
+#author {
+  grid-area: authorArea;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+#author p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+}
+
+#socialMedia {
+  grid-area: socialMediaArea;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding-left: 0.8rem;
+  color: white;
+}
+
+                                                  /* .PickPlayer*/
+.pickPlayer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'onePlayerArea'
+    'twoPlayersArea';
+  width: 100%;
+  height: 100%;
+}
+
+.onePlayer {
+  grid-area: onePlayerArea;
+  position: relative;
+}
+
+.btnPickPlayer {
+  width: 17.5rem;
+  height: 8rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -8.75rem;
+  font-size: 2.5rem;
+  border: 0.2rem solid rgb(0, 230, 230);
+  border-radius: 5px;
+  color: rgb(0, 230, 230);
+  background-color: white;
+  outline: none;
+  transition-duration: 0.2s;
+}
+
+#btnOnePlayer {
+  bottom: 3rem;
+}
+
+.btnPickPlayer:hover {
+  color: white;
+  background-color: rgb(0, 230, 230);
+  transition-duration: 0.3s;
+}
+
+.twoPlayers {
+  grid-area: twoPlayersArea;
+  position: relative;
+}
+
+#btnTwoPlayers {
+  top: 0;
+}
+
+                                                  /* .enterName*/
+.enterName {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'enterFirstNameArea enterFirstNameArea'
+    'backToPickPlayerArea confirmFirstNameArea';
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.enterFirstName {
+  position: relative;
+  grid-area: enterFirstNameArea;
+}
+
+.enterPlayerName {
+  position: absolute;
+  width: 30rem;
+  height: 4rem;
+  font-size: 2.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  left: 50%;
+  margin-left: -15rem;
+  top: 10rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 10px 1px rgb(0, 230, 230);
+}
+
+::-webkit-input-placeholder {
+  color: lightgrey;
+}
+::-moz-placeholder {
+  color: lightgrey;
+}
+:-moz-placeholder {
+  color: lightgrey;
+}
+:-ms-input-placeholder {
+  color: lightgrey;
+}
+
+.backToPickPlayer {
+  position: relative;
+  grid-area: backToPickPlayerArea;
+}
+
+.btnBack {
+  position: absolute;
+  width: 7rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  padding: 0;
+  left: 100%;
+  margin-left: -15rem;
+  border: 0.11rem solid rgb(0, 230, 230);
+  border-radius: 5px;
+  color: rgb(0, 230, 230);
+  background-color: white;
+  outline: none;
+  transition-duration: 0.2s;
+}
+
+#btnFirstBack {
+  left: 100%;
+  margin-left: -15rem;
+}
+
+.btnBack:hover {
+  color: white;
+  background-color: rgb(0, 230, 230);
+  transition-duration: 0.3s;
+}
+
+.confirmFirstName {
+  position: relative;
+  grid-area: confirmFirstNameArea;
+}
+
+.btnNext {
+  position: absolute;
+  width: 7rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  padding: 0;
+  left: 8rem;
+  border: 0.11rem solid rgb(0, 230, 230);
+  border-radius: 5px;
+  color: rgb(0, 230, 230);
+  background-color: white;
+  outline: none;
+  transition-duration: 0.2s;
+}
+
+.btnNext:hover {
+  color: white;
+  background-color: rgb(0, 230, 230);
+  transition-duration: 0.3s;
+}
+
+                                                    /* .pickSide*/
+.pickSide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas:
+    'crossSideArea zeroSideArea'
+    'backToEnterNameArea backToEnterNameArea';
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.crossSide {
+  grid-area: crossSideArea;
+  position: relative;
+}
+
+#btnCrossSide {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  font-size: 6rem;
+  left: 70%;
+  margin-left: -5rem;
+  top: 10rem;
+  padding: 0;
+  border: 0.3rem solid rgb(0, 230, 0);
+  border-radius: 5px;
+  color: rgb(0, 230, 0);
+  background-color: white;
+  outline: none;
+  transition-duration: 0.2s;
+}
+
+#btnCrossSide:hover {
+  color: white;
+  background-color: rgb(0, 230, 0);
+  transition-duration: 0.3s;
+}
+
+.zeroSide {
+  grid-area: zeroSideArea;
+  position: relative;
+}
+
+#btnZeroSide {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  font-size: 5rem;
+  font-weight: 600;
+  left: 30%;
+  margin-left: -5rem;
+  top: 10rem;
+  padding: 0;
+  border: 0.3rem solid rgb(255, 51, 0);
+  border-radius: 5px;
+  color: rgb(255, 51, 0);
+  background-color: white;
+  outline: none;
+  transition-duration: 0.2s;
+}
+
+#btnZeroSide:hover {
+  color: white;
+  background-color: rgb(255, 51, 0);
+  transition-duration: 0.3s;
+}
+
+.backToEnterName {
+  position: relative;
+  grid-area: backToEnterNameArea;
+}
+
+#btnSecondBack {
+  left: 50%;
+  margin-left: -3.5rem;
+}
+
+
+                                              /* .enterSecondPlayer*/
+.enterSecondPlayer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'enterSecondNameArea enterSecondNameArea'
+    'backToPickSideArea confirmSecondNameArea';
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.enterSecondName {
+  position: relative;
+  grid-area: enterSecondNameArea;
+}
+
+.backToPickSide {
+  position: relative;
+  grid-area: backToPickSideArea;
+}
+
+#btnThirdBack {
+  left: 100%;
+  margin-left: -15rem;
+}
+
+.confirmSecondName {
+  position: relative;
+  grid-area: confirmSecondNameArea;
+}
+
+                                                /* .pickDifficulty*/
+.pickDifficulty {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3.5fr 6fr 3fr;
+  grid-template-areas:
+    'titleDifficultyArea'
+    'difficultyLevels'
+    'backToEnterSecondPlayerArea';
+  width: 100%;
+  height: 100%;
+}
+
+.titleDifficulty {
+  grid-area: titleDifficultyArea;
+  position: relative;
+}
+
+#textDifficulty {
+  position: absolute;
+  width: 25rem;
+  height: 3.5rem;
+  bottom: 0;
+  left: 50%;
+  margin: 0;
+  margin-left: -12.5rem;
+  font-size: 2.3rem;
+  text-align: center;
+  border: 0.2rem rgb(128, 0, 96);
+  border-radius: 5px 5px 0 0;
+  color: rgb(255, 255, 255);
+  background-color: rgb(128, 0, 96);
+}
+
+.difficultyLevels {
+  grid-area: difficultyLevels;
+  position: relative;
+}
+
+.btnLevel {
+  position: absolute;
+  width: 25rem;
+  height: 3.5rem;
+  left: 50%;
+  margin: 0;
+  margin-left: -12.5rem;
+  font-size: 2rem;
+  text-align: center;
+  border: 0.2rem solid rgb(128, 0, 96);
+  border-top: 0;
+  outline: none;
+  color: rgb(146, 181, 88);
+  background-color: rgb(255, 255, 255);
+  transition-duration: 0.1s;
+}
+
+#btnEasyLevel {
+  top: 0;
+}
+
+.btnLevel:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(146, 181, 88);
+  transition-duration: 0.3s;
+  font-size: 2.2rem;
+}
+
+#btnModerateLevel {
+  top: 3.5rem;
+}
+
+#btnHardLevel {
+  top: 7rem;
+}
+
+.backToEnterSecondPlayer {
+  position: relative;
+  grid-area: backToEnterSecondPlayerArea;
+}
+
+#btnFourthBack {
+  left: 50%;
+  margin-left: -3.5rem;
+}
+
+                                                        /* .game*/
+.game {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    'playerOneScoresArea gameFieldArea playerTwoScoresArea';
+  width: 100%;
+  height: 100%;
+}
+
+.playerOneScoresDiv {
+  grid-area: playerOneScoresArea;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 0.75fr;
+  grid-template-areas:
+    'playerOneDivNameArea'
+    'playerOneDivScoreArea';
+  width: 100%;
+  height: 100%;
+}
+
+#playerOneDivName {
+  position: relative;
+  grid-area: playerOneDivNameArea;
+}
+
+#playerOneDivScore {
+  position: relative;
+  grid-area: playerOneDivScoreArea;
+}
+
+.playersNames {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.playersNames p {
+  position: absolute;
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  bottom: 0;
+}
+
+#playerOneScoresName {
+  color: rgb(0, 230, 0);
+}
+
+#playerTwoScoresName {
+  color: rgb(255, 51, 0);
+}
+
+.playersScores form {
+  height: 75%;
+  width: 100%;
+}
+
+.playersScores form input {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 10rem;
+  border: none;
+}
+
+.playersScores form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+.playersScores form input::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+.playersScores form input:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+.playersScores form input:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+
+.colonDiv {
+  position: relative;
+  grid-area: colonDivArea;
+  width: 0;
+  height: 0;
+}
+
+#colon {
+  position: absolute;
+  display: block;
+}
+
+.gamefield {
+  grid-area: gameFieldArea;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.9fr;
+  grid-template-areas:
+    'menuArea'
+    'battlefieldArea';
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  position: absolute;
+  grid-area: menuArea;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#btnMenu {
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  border: 0.2rem solid rgb(153, 102, 255);
+  border-top: none;
+  background-color: white;
+  color: rgb(153, 102, 255);
+  outline: none;
+}
+
+.subMenu {
+  position: relative;
+  display: block;
+  width: 14rem;
+  height: 5.2rem;
+  left: 50%;
+  margin-left: -7rem;
+}
+
+#btnNewChallenge {
+  width: 100%;
+  height: 50%;
+  font-size: 1.4rem;
+  border: 0.2rem solid rgb(153, 102, 255);
+  border-top: none;
+  background: white;
+  color: rgb(153, 102, 255);
+  outline: none;
+  opacity: 0.8;
+}
+
+#btnDifficulty {
+  width: 100%;
+  height: 50%;
+  font-size: 1.4rem;
+  border: 0.2rem solid rgb(153, 102, 255);
+  border-radius: 0 0 5px 5px;
+  border-top: none;
+  background: white;
+  color: rgb(153, 102, 255);
+  outline: none;
+  opacity: 0.8;
+}
+
+.subDifficulty {
+  position: relative;
+  display: block;
+  width: 12rem;
+  height: 7.2rem;
+  left: 50%;
+  margin-left: -6rem;
+}
+
+.btnLevelMenu {
+  width: 100%;
+  height: 33.33%;
+  font-size: 1.2rem;
+  border: 0.2rem solid rgb(153, 102, 255);
+  border-top: none;
+  background: white;
+  color: rgb(153, 102, 255);
+  outline: none;
+  opacity: 0.8;
+}
+
+.battlefield {
+  position: absolute;
+  grid-area: battlefieldArea;
+  z-index: 1;
+  background-color: rgb(0, 230, 230);
+  width: 100%;
+  height: 100%;
+}
+
+.subBattlefield {
+  position: relative;
+  display: grid;
+  width: 22rem;
+  height: 22rem;
+  z-index: 0;
+  left: 50%;
+  margin-left: -11rem;
+  top: 50%;
+  margin-top: -11rem;
+  grid-template-columns: 7rem 7rem 7rem;
+  grid-template-rows: 7rem 7rem 7rem;
+  grid-gap: 0.5rem;
+  background-color: rgb(153, 102, 255);
+  grid-template-areas:
+    'cellOneArea cellTwoArea cellThreeArea'
+    'cellFourArea cellFiveArea cellSixArea'
+    'cellSevenArea cellEightArea cellNineArea';
+}
+
+.battlefieldCell {
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cellButton {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 230, 230);
+  outline: none;
+  border: none;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 230, 230);
+}
+
+.pathZero {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: white;
+  stroke-width: 0.6rem;
+  stroke-dasharray: 1000;
+  -webkit-animation: zeroExample 1.25s 1;
+  animation: zeroExample 1.25s 1;
+}
+
+@-webkit-keyframes zeroExample {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes zeroExample {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.pathCrossOne {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: black;
+  stroke-width: 0.6rem;
+  stroke-dasharray: 500;
+  -webkit-animation: crossOneExample 1s 1;
+  animation: crossOneExample 1s 1;
+}
+
+@-webkit-keyframes crossOneExample {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes crossOneExample {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.pathCrossTwo {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: black;
+  stroke-width: 0.6rem;
+  stroke-dasharray: 500;
+  -webkit-animation: crossTwoExample 1s 1;
+  animation: crossTwoExample 1s 1;
+}
+
+@-webkit-keyframes crossTwoExample {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes crossTwoExample {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+#cell_1 {
+  grid-area: cellOneArea;
+  position: relative;
+}
+
+#cell_2 {
+  grid-area: cellTwoArea;
+  position: relative;
+}
+
+#cell_3 {
+  grid-area: cellThreeArea;
+  position: relative;
+}
+
+#cell_4 {
+  grid-area: cellFourArea;
+  position: relative;
+}
+
+#cell_5 {
+  grid-area: cellFiveArea;
+  position: relative;
+}
+
+#cell_6 {
+  grid-area: cellSixArea;
+  position: relative;
+}
+
+#cell_7 {
+  grid-area: cellSevenArea;
+  position: relative;
+}
+
+#cell_8 {
+  grid-area: cellEightArea;
+  position: relative;
+}
+
+#cell_9 {
+  grid-area: cellNineArea;
+  position: relative;
+}
+
+.playerTwoScoresDiv {
+  grid-area: playerTwoScoresArea;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 0.75fr;
+  grid-template-areas:
+    'playerTwoDivNameArea'
+    'playerTwoDivScoreArea';
+  width: 100%;
+  height: 100%;
+}
+
+#playerTwoDivName {
+  position: relative;
+  grid-area: playerTwoDivNameArea;
+}
+
+#playerTwoDivScore {
+  position: relative;
+  grid-area: playerTwoDivScoreArea;
+}
+
+#author {
+  display: block;
+  position: relative;
+  font-size: 0.8rem;
+  height: 1rem;
+  top: 50%;
+  margin-top: -0.5rem;
+}
+
+#notificationBack {
+  position: absolute;
+  display: block;
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.8;
+}
+
+#notification {
+  position: absolute;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    'notificationPArea'
+    'notificationBtnArea';
+  width: 40vw;
+  height: 30vh;
+  top: 5%;
+  left: 30%;
+  background-color: white;
+  font-family: Quicksand;
+}
+
+#notificationP {
+  position: relative;
+  display: block;
+  grid-area: notificationPArea;
+  width: 100%;
+  height: 100%;
+}
+
+#notification p {
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 4rem;
+  top: 50%;
+  margin-top: -2rem;
+  font-size: 3rem;
+}
+
+#notificationBtn {
+  position: relative;
+  display: block;
+  grid-area: notificationBtnArea;
+  width: 100%;
+  height: 100%;
+}
+
+#btnContinue {
+  position: relative;
+  text-align: center;
+  width: 9rem;
+  height: 3rem;
+  left: 50%;
+  margin-left: -4.5rem;
+  font-size: 1.5rem;
+  color: rgb(0, 230, 230);
+  background-color: white;
+  border: 0.1rem solid rgb(0, 230, 230);
+  border-radius: 5px;
+  outline: none;
+}
+
+#btnContinue:hover {
+  color: white;
+  background-color: rgb(0, 230, 230);
+  border: 0.1rem solid rgb(0, 230, 230);
+}
+
+
+
+                                 /* media queries for smartphones (portrait orientation)*/
+@media screen and (max-width: 812px) {
+  
+  :root {
+    font-size: 10px;
+  }
+  
+  .btnPickPlayer {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 0.2rem solid rgb(255, 255, 255);
+    color: white;
+    background-color: rgb(0, 230, 230);
+    font-size: 3.5rem;
+  }
+  
+  .btnPickPlayer:hover {
+    border-color: rgb(0, 230, 230);
+    color: rgb(0, 230, 230);
+    background-color: white;
+  }
+  
+  .enterName {
+    grid-template-rows: 2fr 1fr;
+  }
+  
+  .enterPlayerName {
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 0.11rem solid rgb(0, 187, 204);
+    font-size: 3rem;
+  }
+  
+  .btnBack {
+    top: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 0.2rem solid rgb(255, 255, 255);
+    color: white;
+    background-color: rgb(0, 230, 230);
+    font-size: 2.5rem;
+  }
+  
+  #btnFirstBack {
+    left: 0;
+    margin: 0;
+  }
+  
+  .btnBack:hover {
+    border-color: rgb(0, 230, 230);
+    color: rgb(0, 230, 230);
+    background-color: white;
+  }
+  
+  .btnNext {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 0.2rem solid rgb(255, 255, 255);
+    color: white;
+    background-color: rgb(0, 230, 230);
+    font-size: 2.5rem;
+  }
+  
+  .btnNext:hover {
+    border-color: rgb(0, 230, 230);
+    color: rgb(0, 230, 230);
+    background-color: white;
+  }
+  
+  .pickSide {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-areas:
+    'crossSideArea'
+    'zeroSideArea'
+    'backToEnterNameArea';
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+  
+  #btnCrossSide {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  
+  #btnZeroSide {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  
+  #btnSecondBack {
+    left: 0;
+    margin: 0;
+  }
+  
+  .enterSecondPlayer {
+    grid-template-rows: 2fr 1fr;
+  }
+  
+  #btnThirdBack {
+    left: 0;
+    margin: 0;
+  }
+  
+  .pickDifficulty {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 3fr 0.9fr;
+  }
+  
+  #textDifficulty {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+    padding-top: 1rem;
+    border-radius: 0;
+  }
+  
+  .btnLevel {
+    width: 100%;
+    height: 33.33%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+  }
+  
+  #btnEasyLevel {
+    top: 0;
+  }
+  
+  .btnLevel:hover {
+    font-size: 4rem;
+  }
+  
+  #btnModerateLevel {
+    top: 33.33%;
+  }
+  
+  #btnHardLevel {
+    top: 66.66%;
+  }
+  
+  #btnFourthBack {
+    left: 0;
+    margin: 0;
+  }
+  
+  .game {
+    grid-template-columns: 1fr 0.1fr 1fr;
+    grid-template-rows: 2fr 0.3fr;
+    grid-template-areas:
+    'gameFieldArea gameFieldArea gameFieldArea'
+    'playerOneScoresArea colonDivArea playerTwoScoresArea';
+  }
+  
+  .gamefield {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+  }
+  
+  .playerOneScoresDiv {
+    grid-template-columns: 0.8fr 0.2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      'playerOneDivNameArea playerOneDivScoreArea';
+  }
+  
+  .playerTwoScoresDiv {
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      'playerTwoDivScoreArea playerTwoDivNameArea';
+  }
+  
+  .playersNames p {
+    top: 50%;
+    margin-top: -1.5rem;
+  }
+  
+  .playersScores form {
+    height: 100%;
+  }
+  
+  .playersScores form input {
+    margin: 0;
+    padding: 0;
+    font-size: 2.7rem;
+  }
+  
+  .colonDiv {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #colon {
+    text-align: center;
+    width: 1rem;
+    left: 50%;
+    margin-left: -0.5rem;
+    top: 50%;
+    margin-top: -1.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  
+  .subBattlefield {
+    width: 19rem;
+    height: 19rem;
+    left: 50%;
+    margin-left: -9.5rem;
+    top: 50%;
+    margin-top: -9.5rem;
+    grid-template-columns: 6rem 6rem 6rem;
+    grid-template-rows: 6rem 6rem 6rem;
+  }
+  
+  svg {
+  width: 6rem;
+  height: 6rem;
+  background-color: rgb(0, 230, 230);
+}
+  
+  #notification {
+  width: 100vw;
+  height: 30vh;
+  top: 0;
+  left: 0;
+}
+  
+  footer {
+    grid-template-columns: 1.9fr 1fr;
+  }
+  
+  i {
+    font-size: 2.5rem;
+    padding-left: 0.2rem;
+  }
+  
+}
+
+

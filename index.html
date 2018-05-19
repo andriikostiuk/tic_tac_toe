@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tic-Tac-Toe</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <html>
+  <head>
+    <title>Tic-Tac-Toe</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" type="text/css">
+    <div class='container'>
+      <header>
+        <h1>Tic-Tac-Toe</h1>
+      </header>
+      <main>
+        <div class='pickPlayer'>
+          <div class='onePlayer'>
+            <button class='btnPickPlayer' id='btnOnePlayer'>1 Player</button>
+          </div>
+          <div class='twoPlayers'>
+            <button class='btnPickPlayer' id='btnTwoPlayers'>2 Players</button>
+          </div>
+        </div>
+        <div class='enterName'>
+          <div class='enterFirstName'>
+            <form>
+              <input type='text' class='enterPlayerName' id='onePlayerName' placeholder='Type Player_1 Name' maxlength='15' autofocus>
+            </form>
+          </div>
+          <div class='confirmFirstName'>
+            <button class='btnNext' id='btnFirstNext'>Next</button>
+          </div>
+          <div class='backToPickPlayer'>
+            <button class='btnBack' id='btnFirstBack'>Back</button>
+          </div>
+        </div>
+        <div class='pickSide'>
+          <div class='crossSide'>
+            <button id=btnCrossSide>&#10005;</button>
+          </div>
+          <div class='zeroSide'>
+            <button id=btnZeroSide>&#9711;</button>
+          </div>
+          <div class='backToEnterName'>
+            <button class='btnBack' id='btnSecondBack'>Back</button>
+          </div>
+        </div>
+        <div class='enterSecondPlayer'>
+          <div class='enterSecondName'>
+            <form>
+              <input type='text' class='enterPlayerName' id='secondPlayerName' placeholder='Type Player_2 Name' maxlength='15' autofocus>
+            </form>
+          </div>
+          <div class='confirmSecondName'>
+            <button class='btnNext' id='btnSecondNext'>Next</button>
+          </div>
+          <div class='backToPickSide'>
+            <button class='btnBack' id='btnThirdBack'>Back</button>
+          </div>
+        </div>
+        <div class='pickDifficulty'>
+          <div class='titleDifficulty'>
+            <p id='textDifficulty'>Difficulty</p>
+          </div>
+          <div class='difficultyLevels'>
+            <button class='btnLevel' id='btnEasyLevel'>easy</button>
+            <button class='btnLevel' id='btnModerateLevel'>moderate</button>
+            <button class='btnLevel' id='btnHardLevel'>hard</button>
+          </div>
+          <div class='backToEnterSecondPlayer'>
+            <button class='btnBack' id='btnFourthBack'>Back</button>
+          </div>
+        </div>
+        <div class='game'>
+          <div class='playerOneScoresDiv'>
+            <div class=playersNames id='playerOneDivName'>
+              <p id='playerOneScoresName'></p>
+            </div>
+            <div class='playersScores' id='playerOneDivScore'>
+              <form>
+                <input type='text' id='playerOneScores' placeholder='0' maxlength='3' readonly>
+              </form>
+            </div>
+          </div>
+          <div class='colonDiv'>
+            <p id='colon'>:</p>
+          </div>
+          <div class='gamefield'>
+            <div class='menu'>
+                <button id='btnMenu'>Menu</button>
+                <div class='subMenu'>
+                  <button id='btnNewChallenge'>New Challenge</button><br>
+                  <button id=btnDifficulty>Difficulty</button>
+                  <div class='subDifficulty'>
+                    <button class='btnLevelMenu' id='btnEasy'>easy</button><br>
+                    <button class='btnLevelMenu' id='btnModerate'>moderate</button><br>
+                    <button class='btnLevelMenu' id='btnHard'>hard</button>
+                  </div>
+                </div>
+            </div>
+            <div class='battlefield'>
+              <div class='subBattlefield'>
+                <div class='battlefieldCell' id='cell_1'>
+                  <button class='cellButton' id=btnCell_1></button>
+                </div>
+                <div class='battlefieldCell' id='cell_2'>
+                  <button class='cellButton' id=btnCell_2></button>
+                </div>
+                <div class='battlefieldCell' id='cell_3'>
+                  <button class='cellButton' id=btnCell_3></button>
+                </div>
+                <div class='battlefieldCell' id='cell_4'>
+                  <button class='cellButton' id=btnCell_4></button>
+                </div>
+                <div class='battlefieldCell' id='cell_5'>
+                  <button class='cellButton' id=btnCell_5></button>
+                </div>
+                <div class='battlefieldCell' id='cell_6'>
+                  <button class='cellButton' id=btnCell_6></button>
+                </div>
+                <div class='battlefieldCell' id='cell_7'>
+                  <button class='cellButton' id=btnCell_7></button>
+                </div>
+                <div class='battlefieldCell' id='cell_8'>
+                  <button class='cellButton' id=btnCell_8></button>
+                </div>
+              <div class='battlefieldCell' id='cell_9'>
+                <button class='cellButton' id=btnCell_9></button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class='playerTwoScoresDiv'>
+            <div class=playersNames id='playerTwoDivName'>
+              <p id='playerTwoScoresName'></p>
+            </div>
+            <div class='playersScores' id='playerTwoDivScore'>
+              <form>
+                <input type='text' id='playerTwoScores' placeholder='0' maxlength='3' readonly>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div id='author'>
+          <p>coded and designed by Andrii Kostiuk</p>
+        </div>
+        <div id='socialMedia'>
+          <a href='https://www.facebook.com/andrii.kostiuk.7' target='_blank'><i class="fab fa-facebook-square"></i></a>
+          <a href='#'><i class="fab fa-linkedin"></i></a>
+          <a href='#'><i class="fab fa-github-square"></i></a>
+        </div>
+      </footer>
+      <div id="notificationBack">
+      </div>
+      <div id="notification">
+        <div id="notificationP">
+          <p></p>
+        </div>
+        <div id="notificationBtn">
+          <button id="btnContinue">Continue</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='http://www.kodhus.com/moveit.0.4.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
